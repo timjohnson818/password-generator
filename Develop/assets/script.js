@@ -33,8 +33,9 @@ function writePassword() {
     {
       return;
     }
-    else
+    else{
     alert("That is an invalid input.");
+    }
   }
 
   checker = 0;
@@ -50,7 +51,10 @@ function writePassword() {
     {
       return;
     }
+    else
+    {
     alert("That is an invalid input");
+    }
   }
 
   checker = 0;
@@ -67,7 +71,9 @@ function writePassword() {
       return;
     }
     else
+    {
     alert("That is an invalid input");
+    }
   }
 
   checker = 0;
@@ -83,10 +89,13 @@ function writePassword() {
     {
       return;
     }
+    else
+    {
     alert("That is an invalid input");
+    }
   }
   
-  if(lower == "n" || lower == "N" && special === "n" || special  === "N" && numbers === "n" || numbers === "N" && upper === "n" || upper === "N")
+  if((lower == "n" || lower == "N") && (special === "n" || special  === "N") && (numbers === "n" || numbers === "N") && (upper === "n" || upper === "N"))
   {
     alert("You must select at least one type of character to generate a password.\nPress the button to try again.")
   }
