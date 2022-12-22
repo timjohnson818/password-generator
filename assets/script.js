@@ -90,7 +90,7 @@ function writePassword() {
     {
       checker = 1;
     }
-    else if(speciall === null)
+    else if(special === null)
     {
       return;
     }
