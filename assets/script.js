@@ -4,7 +4,8 @@ var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
 function writePassword() {
 
-  var checker = 0;
+  //password length
+  var checker = 0; //used for input vaildation
   var length;
   while(checker==0){
     length = prompt("Enter the number of characters in the password", "Between 8-128");
@@ -20,6 +21,7 @@ function writePassword() {
     alert("That is not a valid input");
   }
   
+  //lowercase letter selection
   checker = 0;
   var lower;
   while(checker == 0)
@@ -38,6 +40,7 @@ function writePassword() {
     }
   }
 
+  //uppercase letter selection
   checker = 0;
   var upper;
   while(checker == 0)
@@ -57,6 +60,7 @@ function writePassword() {
     }
   }
 
+  //numbers selection
   checker = 0;
   var numbers;
   while(checker == 0)
@@ -76,6 +80,7 @@ function writePassword() {
     }
   }
 
+  //special character selection
   checker = 0;
   var special;
   while(checker == 0)
@@ -95,6 +100,7 @@ function writePassword() {
     }
   }
   
+  //lets the user know they must choose at least one modifier and tells them to try again
   if((lower == "n" || lower == "N") && (special === "n" || special  === "N") && (numbers === "n" || numbers === "N") && (upper === "n" || upper === "N"))
   {
     alert("You must select at least one type of character to generate a password.\nPress the button to try again.")
@@ -112,12 +118,13 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+//takes the inputs from the user and uses them to generate a password that matches the specifications.
 function generatePassword(length,lower,upper,numbers,special){
   var totalRNG = 0;
   var characters = "";
   var password = "";
 
-
+    //if a modifier is selected then the specified characters are added to the characters string
     if(length <= 128 && length >=8)
     {
       if(numbers == "y" || numbers == "Y")
@@ -141,6 +148,7 @@ function generatePassword(length,lower,upper,numbers,special){
         totalRNG += 8;
       }
 
+      //randomly generates characters up to the specified length by using the characters string and the charAt method.
       for(var i = 0; i < length; i++)
       {
         password += characters.charAt(Math.floor(Math.random() * totalRNG));

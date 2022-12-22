@@ -18,6 +18,10 @@ Provide a short description explaining the what, why, and how of your project. U
 
 [Password Generator](https://timjohnson818.github.io/password-generator)
 
+```md
+    ![screenshot](./assets/images/screenshot.PNG)
+    ```
+
 
 
 ## Usage
@@ -29,6 +33,8 @@ Provide a short description explaining the what, why, and how of your project. U
 - At any point you may click on the 'Cancel' button to stop the current generating process in case you made a mistake or choose not to proceed.
 
 - Once you've finished answering the prompts the program will randomly generate a password according to your specifications and display it on the screen.
+
+
 
 ## License
 
