@@ -18,9 +18,9 @@ Provide a short description explaining the what, why, and how of your project. U
 
 [Password Generator](https://timjohnson818.github.io/password-generator)
 
-```md
-    ![screenshot](./assets/images/screenshot.PNG)
-    ```
+
+[screenshot](./assets/images/screenshot.PNG)
+s
 
 
 
